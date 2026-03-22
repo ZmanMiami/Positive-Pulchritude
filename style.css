@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* Navigation Bar Container */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end; /* moves links to the right */
+  padding: 10px 20px; /* optional spacing */
+}
+
+/* Navigation Links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  background-color: #575757;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+body {
+  background-color: hsl(206, 47%, 77%);
+  font-family: "Comfortaa", sans-serif;
+}
+
+header {
+  background-color: #3a5f8a;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  color: hsl(219, 100%, 18%);
+}
+
+h1, h2 {
+  font-family: "Caveat Brush", cursive;
+}
+.table-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+table {
+  background-color: #3d88d2;
+  width: 300px;
+  height: 300px;
+  border: 3px solid silver;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+aside {
+  background-color: #6babeb;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-family: "Caveat Brush", cursive;
+  color: rgb(176, 12, 64);
+  list-style-type: none;
+  padding-left: 0;}
