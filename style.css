@@ -59,22 +59,25 @@ footer {
 h1, h2 {
   font-family: "Caveat Brush", cursive;
 }
-.table-img {
-  width: 80px;
-  height: 80px;
+.image {
+  width: 100px;
+  height: auto;
   object-fit: cover;
   border-radius: 6px;
-  margin-right: 10px;
+  display: block;
+  margin: 20px auto; /* adds spacing + centers */
 }
 
-table {
-  background-color: #3d88d2;
-  width: 300px;
-  height: 300px;
+
+table { 
+  width: auto;
+  height: 150px;
+  margin: 0 auto; /* centers the table */
+ background-color: #3d88d2;
   border: 3px solid silver;
   border-radius: 20px;
-  padding: 15px;
-}
+  padding: 15px;}
+
 
 aside {
   background-color: #6babeb;
