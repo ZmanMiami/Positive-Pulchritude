@@ -1,35 +1,43 @@
 <!doctype html>
 <html lang="en"> 
  <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Positive Pulchridtude</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
+  <!-- Materialize CSS (use ONLY version 1.0.0) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="style.css">
-</head> 
-       
-    <style>
-       body {
-           background-color: #148ae4;
-           font-family: Caveat Brush, sans-serif;
-       }
-       .container {
-           margin-top: 20px;
-       }
-       h4 {
-           color: #d5e1df;
-       }
-       .card .card-image img {
-           height: 200px;
-           object-fit: cover;
-       }
-   </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Your custom stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style>
+    body {
+      background-color: #148ae4;
+      font-family: Caveat Brush, sans-serif;
+      padding-bottom: 48px;
+    }
+    header { margin-bottom: 24px; }
+    .container { margin-top: 20px; }
+    h4 { color: #d5e1df; }
+    .card .card-image img { height: 200px; object-fit: cover; }
+    .demo-section { margin-top: 32px; }
+    .controls .btn { margin-right: 8px; margin-bottom: 8px; }
+    .carousel { margin-top: 12px; }
+    .collapsible-body p { margin-top: 0; }
+  </style>
 </head>
 
-<body> <header><nav>
+
+<body> <header>
+      <nav>
   <div class="nav-wrapper teal">
     <a href="#" class="brand-logo">Positive Pulchridtude</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -38,7 +46,7 @@
       <li><a href="about.html">Info</a></li>
       <li><a href="materialize.html" class="active">Materialize</a></li>
     </ul>
-  </div>
+  </div> 
 </nav> </header> 
 
 
@@ -100,16 +108,110 @@ Positive Pulchridtude was created to remind people that good things are happenin
            </div>
            
        </div>
+   </div> <div id="radio-section" class="section container">
+       <h2>Select Your Favorite story from today</h2>
+       <form>
+           <p>
+               <label>
+                   <input name="pastry" type="radio" value=" Man Creates Sculptures from Discarded Flip-Flops" onclick="displayPastry()"/>
+                   <span>Croissant</span>
+               </label>
+           </p>
+           <p>
+               <label>
+                   <input name="pastry" type="radio" value="Breakthrough in Cancer Research Offers New Hope" onclick="displayPastry()"/>
+                   <span>Muffin</span>
+               </label>
+           </p>
+           <p>
+               <label>
+                   <input name="pastry" type="radio" value="Innovative Technology Reduces Carbon Emissions" onclick="displayPastry()"/>
+                   <span>Donut</span>
+               </label>
+           </p>
+       </form>
+       <div id="pastry-response"></div>
    </div>
+<!-- Email Feedback Section -->
+   <div id="feedback-section" class="section container">
+       <h2>Subscribe for Updates</h2>
+       <form onsubmit="submitEmail(event)">
+           <div class="input-field">
+               <input id="email" type="email" required>
+               <label for="email">Email</label>
+           </div>
+           <button type="submit" class="btn waves-effect waves-light">Subscribe</button>
+       </form>
+       <div id="email-response"></div>
+   </div>  <!-- BASIC CAROUSEL -->
+    <section id="basic" class="demo-section">
+      <h5>1) Basic Carousel</h5>
 
 
-   <!-- Materialize JS -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-   <script>
-       document.addEventListener('DOMContentLoaded', function() {
-           var elems = document.querySelectorAll('.materialboxed');
-           var instances = M.Materialbox.init(elems);
-       });
-   </script>
+      <div class="controls">
+        <button id="basicPrev" class="btn waves-effect">Prev</button>
+        <button id="basicNext" class="btn waves-effect">Next</button>
+        <button id="basicGo3" class="btn waves-effect">Go to #3</button>
+      </div>
+
+
+      <div class="carousel" id="basicCarousel">
+        <a class="carousel-item" href="#one!">
+          <img alt="Photo 1" src="https://www.bellanaija.com/wp-content/uploads/2023/05/Copy_of_Ocean_Sole_28_ZF_8064_85819_1_001_028-1000x600.jpg" />
+        </a>
+        <a class="carousel-item" href="#two!">
+          <img alt="Photo  2" src="https://www.re-thinkingthefuture.com/wp-content/uploads/2024/01/1.-COMMUNITY-GARDEN-cover_900_584-770x515.jpg?w=999" />
+        </a>
+        <a class="carousel-item" href="#three!">
+          <img alt="Photo 3" src="https://ourworldindata.org/uploads/2022/10/number-of-poor-plus-projections-1-768x620.png" />
+        </a>
+        <a class="carousel-item" href="#four!">
+          <img alt="Photo 4" src="https://www.re-thinkingthefuture.com/wp-content/uploads/2024/01/1.-COMMUNITY-GARDEN-cover_900_584-770x515.jpg?w=999" />
+        </a>
+        <a class="carousel-item" href="#five!">
+          <img alt="Photo 5" src="https://www.positive.news/wp-content/uploads/2026/03/Carrying-saplings-1800x0-c-center.jpg" />
+        </a>
+      </div>
+
+
+      <p class="black-text">
+        Tip: Try dragging/swiping the carousel.
+      </p>
+    </section>
+
+  
+
+
+
+
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize materialboxed images
+    const elems = document.querySelectorAll('.materialboxed');
+    M.Materialbox.init(elems);
+
+    // Initialize basic carousel
+    const basicElem = document.querySelector('#basicCarousel');
+    const basicInstance = M.Carousel.init(basicElem, {
+      duration: 200,
+      dist: -100,
+      shift: 0,
+      padding: 0,
+      numVisible: 5,
+      indicators: false
+    });
+
+    // Carousel controls
+    document.querySelector('#basicPrev').addEventListener('click', () => basicInstance.prev());
+    document.querySelector('#basicNext').addEventListener('click', () => basicInstance.next());
+    document.querySelector('#basicGo3').addEventListener('click', () => basicInstance.set(2));
+  });
+</script>
+
+
+<!-- Materialize JS (only version 1.0.0) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
 </body>
 </html>
