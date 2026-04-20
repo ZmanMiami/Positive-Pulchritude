@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en"> 
+ <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Positive Pulchridtude</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body> 
+    <header> 
+        <div class="navbar">
+      <a href="index.html" class="active"> Home</a>
+      <a href="Jquery.html">Jquery</a>
+      <a href="contactt.html">how to reach us</a>
+      <a href="about.html">info</a>
+      <a href="materialize.html">Materialize</a>
+        </div>
+    </header>
+<div class="top-fade-text center-align" style="margin-top: 15px;">
+  <p id="fadeText">learn about new updates</p>
+  <button id="fadeBtn" class="btn waves-effect waves-light">Fade Text</button>
+</div>
+<div class="center-align" style="margin-top: 10px;">
+  <button id="funBtn" class="btn pink lighten-2 waves-effect">Click Me</button>
+</div>
+
+
+    <main>
+    <h1> Story of the day </h1>
+     <h2><a href="https://www.goodnewsnetwork.org/embryo-fossil-is-missing-piece-of-puzzle-thrilling-scientists-with-worlds-oldest-proof-that-mammal-ancestors-laid-eggs"
+   target="_blank" rel="noopener noreferrer">
+  embryo fossil </a>
+  
+ is Missing Puzzle Piece Thrilling Scientists with Oldest Proof that Mammal Ancestors Laid Eggs </h2>
+     <p>In a groundbreaking discovery, scientists have unearthed an embryo fossil that is reshaping our understanding of mammalian evolution. This remarkable find provides the oldest evidence that the ancestors of modern mammals laid eggs, challenging long-held beliefs about the reproductive strategies of early mammals.</p>
+    
+     <div class="fossil-frame">
+      <img class="fossil" src="image-folder\fossil.jpg" alt="Embryo Fossil Image">
+    </div>
+      
+   <!-- BASIC CAROUSEL -->
+    <section id="basic" class="demo-section">
+      <h5>1) want to view other stories? look below </h5>
+
+
+      <div class="controls">
+        <button id="basicPrev" class="btn waves-effect">Prev</button>
+        <button id="basicNext" class="btn waves-effect">Next</button>
+        <button id="basicGo3" class="btn waves-effect">Go to #3</button>
+      </div>
+
+    
+      <div class="carousel"> 
+    <a class="carousel-item" href="https://www.goodnewsnetwork.org/researchers-turn-car-battery-acid-and-plastic-waste-into-clean-hydrogen-and-new-plastic/" target="_blank" rel="noopener noreferrer">
+      <img src="image-folder/researchers.jpg" alt="Researchers Image">
+    </a>
+    <a class="carousel-item" href="https://www.goodnewsnetwork.org/doctor-adopts-4-yo-patient-who-had-no-family-when-he-arrived-for-heart-surgery-and-found-homes-for-his-5-siblings-too" target="_blank" rel="noopener noreferrer">
+      <img src="image-folder/doctor adopts.jpg" alt="Doctor Image">
+    </a>
+    <a class="carousel-item" href="https://www.goodnewsnetwork.org/6,500-volunteers-build-10,000-beds-in-24-hours-for-kids-who-dont-have-one-of-their-own-(watch)" target="_blank" rel="noopener noreferrer">
+      <img src="image-folder/volunteers.jpg" alt="Volunteers Image">
+    </a>
+    <a class="carousel-item" href="https://www.goodnewsnetwork.org/another-african-country-has-cleared-its-debt-to-the-international-monetary-fund" target="_blank" rel="noopener noreferrer">
+      <img src="image-folder/cleared-debt.jpg" alt="Cleared Debt Image">
+    </a>
+
+
+ 
+        </div>
+ 
+
+      <p class="black-text">Compliment of the day: You are enough.</p>
+      <div class="center-align" style="margin-top: 40px;">
+  <h5>Any news recommendations? Any comments, questions, or concerns?</h5>
+  <p>Respond below and don't hesitate to let us know how we're doing.</p>
+
+  <input id="nameInput" type="text" placeholder="Type your message here" class="browser-default" style="max-width: 300px;">
+  <button id="submitBtn" class="btn waves-effect" style="margin-top: 10px;">Submit</button>
+
+  <p id="output" style="margin-top: 10px; font-weight: bold;"></p>
+</div>
+
+    </section>
+  </main>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          <script>
+$(document).ready(function() {
+  // Fade text
+  $("#fadeBtn").click(function() {
+  $("#fadeText").fadeToggle();
+});
+
+
+  // Submit name
+  $("#submitBtn").click(function() {
+    var name = $("#nameInput").val();
+    $("#output").text("Thank you " + name);
+  });
+
+  // Dark mode
+  $("#darkModeBtn").click(function() {
+    $("body").toggleClass("dark");
+  });
+});
+// Fun compliment popup
+$("#funBtn").click(function() {
+  $("<div class='compliment'>🌟 You're doing amazing!</div>")
+    .css({
+      position: "absolute",
+      top: "150px",
+      left: "50%",
+      transform: "translateX(-50%)",
+      background: "#ffeb3b",
+      padding: "10px 20px",
+      borderRadius: "10px",
+      fontWeight: "bold",
+      color: "#333",
+      display: "none",
+      zIndex: 9999
+    })
+    .appendTo("body")
+    .fadeIn(400)
+    .delay(1500)
+    .fadeOut(600, function() {
+      $(this).remove();
+    });
+});
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.carousel');
+      M.Carousel.init(elems, {
+        fullWidth: false,
+        indicators: true
+      });
+
+      // Controls (Prev / Next / Go to #3)
+      var instance = M.Carousel.getInstance(document.querySelector('.carousel'));
+      document.getElementById('basicPrev').addEventListener('click', function() {
+        instance.prev();
+      });
+      document.getElementById('basicNext').addEventListener('click', function() {
+        instance.next();
+      });
+      document.getElementById('basicGo3').addEventListener('click', function() {
+        instance.set(2); // zero-based index: 2 => third slide
+      });
+    }); 
+  </script>
+<button id="darkModeBtn" class="btn black white-text" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+  Dark Mode
+</button>
+
+</body>
+</html>
