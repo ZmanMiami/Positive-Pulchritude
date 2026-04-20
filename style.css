@@ -68,6 +68,7 @@ h1, h2 {
   margin: 20px auto; /* adds spacing + centers */
 }
 
+ 
 
 table { 
   width: auto;
@@ -89,3 +90,38 @@ ul li {
   color: rgb(176, 12, 64);
   list-style-type: none;
   padding-left: 0;}
+
+ .fossil-frame {
+  width: 320px;
+  margin: 16px auto;
+  background: #3d88d2;
+  border: 3px solid silver;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;}
+
+.fossil-frame .fossil {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.carousel .carousel-item img {
+  width: 300px;        /* choose a size that fits your layout */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Small responsive tweak */
+@media (max-width: 600px) {
+  .carousel .carousel-item img {
+    width: 220px;
+    height: 150px;
+  }
+}
+.dark {
+  background-color: #121212;
+  color: white;
+}
