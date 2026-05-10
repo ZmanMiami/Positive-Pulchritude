@@ -1,127 +1,318 @@
-* {
-  box-sizing: border-box;
+.container, .container-fluid {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 
-/* Navigation Bar Container */
-.navbar {
-  background-color: #333;
-  overflow: hidden;
-}
-.navbar {
-  background-color: #333;
-  overflow: hidden;
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: flex-end; /* moves links to the right */
-  padding: 10px 20px; /* optional spacing */
+body { zoom: 90%;
+    background-color: black; 
+}:root {
+  --main-blue: #3a5f8a;
+  --light-accent-blue: #6babeb;
+  --darker-blue: #2c4a6d;
 }
 
-/* Navigation Links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 12px 12px;
+html, body {
+
+  margin: 0;
+
+  padding: 0;
+
+  background-color: var(--main-blue);
+
+  color:#6babeb;
+
+  font-family: "Comfortaa", sans-serif;
+
+  overflow-x: hidden;}
+
+
+
+bootstrap.min.css{
+
+  background-color: var(--main-blue);
+
+} main{
+
+  padding: 20px;
+
+  background-color: var(--main-blue);
+
+
+
+
+} /* This makes your main content and sidebar sit side-by-side instead of stacking */
+
+
+header {
+
+  background-color: var(--main-blue);
+
+  width: 100%;
+
+}
+
+.story-card {
+  background: #000;
+  color: white;               
+  border: 1px solid #fff;     
+  border-radius: 6px;         
+  margin: 20px auto;         
+  max-width: 800px;           
+  padding: 20px;             
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4); 
+}
+.story-card a {
+  color: #4fc3f7;             /* Materialize light blue */
   text-decoration: none;
 }
-
-/* Hover effect */
-.navbar a:hover {
-  background-color: #575757;
+.story-card a:hover {
+  text-decoration: underline;
+}
+.fossil-frame img {
+  border-radius: 6px;
+  border: 2px solid #fff;
 }
 
-/* Active/current link */
-.navbar a.active {
-  background-color: #4CAF50;
+
+.main-nav-bg {
+
+  background-color: #333 !important;
+
+  z-index: 1030;
+
+}
+
+.jq-header {
+  background-color: var(--main-blue);
+  padding: 25px 0;
+  text-align: center;
+}
+
+.jq-title {
+  font-family: "Caveat Brush", cursive;
+  font-size: 2.8rem;
   color: white;
+  margin: 0;
 }
 
-body {
-  background-color: hsl(206, 47%, 77%);
+.jq-nav {
+  margin-top: 12px;
+}
+
+.jq-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 14px;
+  font-size: 1.1rem;
   font-family: "Comfortaa", sans-serif;
 }
 
-header {
-  background-color: #3a5f8a;
-  height: 100px;
+.jq-nav a:hover {
+  text-decoration: underline;
+}
+
+
+.blog-image {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+}
+
+
+.nav-link.active {
+
+  color: #4CAF50 !important;
+
+  font-weight: bold;
+
+}
+
+
+
+/* Font styles */
+
+h1, h2, h3, h4, .blog-header-logo {
+
+  font-family: "Caveat Brush", cursive;
+
+}
+
+
+
+
+
+.feature-block {
+
+  background-size: cover;
+ min-height: 300px;
   display: flex;
   align-items: center;
-  justify-content: center;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://dims.apnews.com/dims4/default/525e96d/2147483647/strip/true/crop/4927x3283+0+0/resize/2880x1920!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F91%2F45%2F1be4e9ead8a6684b74afd51d90f9%2F381de1ce86a54ddc94e07f35b7935129");
+  background-size: cover;
+  
+}
+
+
+
+.bg-white-glass {
+
+  background: rgba(255, 255, 255, 0.85);
+
+  color: #333;
+
+}
+
+
+
+
+
+.bg-dark-blue {
+
+  background-color: var(--darker-blue);
+
+}
+
+
+
+.border-silver {
+
+  border-color: var(--darker-blue)    !important;
+
+}
+
+
+
+
+
+.custom-links li {
+
+  margin-bottom: 15px;
+
+  list-style: none;
+
+}
+
+
+
+.custom-links a {
+
+  color: #ffd700;
+
+  font-size: 1.2rem;
+
+  text-decoration: none;
+
+  font-family: "Caveat Brush", cursive;
+
+}
+
+
+
+.custom-links a:hover {
+
+  text-decoration: underline;
+
+  color: white;
+
+}
+
+
+
+
+
+.btn-outline-light {
+
+    border-width: 2px;
+
+}
+
+
+
+
+
+.btn-outline-secondary {
+
+    background-color: transparent !important;
+
+    color: white !important;
+
+    border-color: white !important;}
+
+    .carousel .carousel-item {
+    width: 300px !important; }
+
+.carousel {
+  height: 350px;
+}
+ /* Remove blue background ONLY on the contact page */
+.contact-page {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Keep footer dark everywhere */
+footer {
+  background-color: #000 !important;
+}
+
+/* Fix header only on Materialize page */
+.materialize-page .main-nav-bg {
+  background-color: #148ae4 !important;
+}
+
+/* Fix nav link colors only on Materialize page */
+.materialize-page .nav-link {
+  color: white !important;
+}
+
+/* Fix footer color only on Materialize page */
+.materialize-page footer {
+  background-color: #1565c0 !important;
+}
+
+/* Ensure the carousel has enough room for images and indicators */
+.materialize-page .carousel {
+    height: 450px !important; /* Increased height for better visibility */
+    perspective: 500px;
+}
+
+/* Ensure the items have a defined width so they don't stack */
+.materialize-page .carousel .carousel-item {
+    width: 300px !important;
+    height: 300px !important;
+}
+.materialize-page :not(.btn) {
+  color: white !important;
+}
+
+.materialize-page .carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 8px;
+}
+
+.materialize-page .container {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.carousel {
+  touch-action: pan-y !important;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
-  color: hsl(219, 100%, 18%);
-}
-
-h1, h2 {
-  font-family: "Caveat Brush", cursive;
-}
-.image {
-  width: 100px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 6px;
-  display: block;
-  margin: 20px auto; /* adds spacing + centers */
-}
-
- 
-
-table { 
-  width: auto;
-  height: 150px;
-  margin: 0 auto; /* centers the table */
- background-color: #3d88d2;
-  border: 3px solid silver;
-  border-radius: 20px;
-  padding: 15px;}
-
-
-aside {
-  background-color: #6babeb;
-}
-
-ul li {
-  margin-bottom: 10px;
-  font-family: "Caveat Brush", cursive;
-  color: rgb(176, 12, 64);
-  list-style-type: none;
-  padding-left: 0;}
-
- .fossil-frame {
-  width: 320px;
-  margin: 16px auto;
-  background: #3d88d2;
-  border: 3px solid silver;
-  border-radius: 12px;
-  padding: 12px;
-  text-align: center;}
-
-.fossil-frame .fossil {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 6px;
-  object-fit: cover;
-}
-.carousel .carousel-item img {
-  width: 300px;        /* choose a size that fits your layout */
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* Small responsive tweak */
-@media (max-width: 600px) {
-  .carousel .carousel-item img {
-    width: 220px;
-    height: 150px;
-  }
-}
-.dark {
-  background-color: #121212;
-  color: white;
+  margin-top: auto;
 }
